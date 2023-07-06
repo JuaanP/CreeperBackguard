@@ -1,7 +1,5 @@
 package com.juaanp.creeperbackguard.mixin;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.LivingEntity;
@@ -36,13 +34,12 @@ public class CreeperIgniteGoalMixin {
 
             LivingEntity player = this.target;
             LivingEntity creeper = this.creeper;
-
             if (player.world.isClient){
                 MinecraftClient minecraftClient = MinecraftClient.getInstance();
                 if(minecraftClient != null){
                     GameOptions gameOptions = minecraftClient.options;
                     if (gameOptions != null) {
-                        fovScale = Math.min(gameOptions.getFov().getValue(), 80);
+                        fovScale = Math.min(gameOptions.fov, 80);
                     }
                 }
             } else {
