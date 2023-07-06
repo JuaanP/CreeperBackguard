@@ -1,18 +1,16 @@
 modLoader="javafml" 
-loaderVersion="[38,)" 
+loaderVersion="[0,)" 
 license="Creative Commons Non-Commercial" 
 [[mods]] 
 modId="creeperbackguard" 
-version="${file.jarVersion}" 
+version="1.2.0" 
 displayName="Creeper Backguard" 
 logoFile="icon.png" 
 authors="JuaanP" 
-description=''' 
-Creepers only ignites within your field of view. 
-''' 
+description="Creepers only ignites within your field of view."
 [[dependencies.creeperbackguard]] 
 modId="minecraft" 
 mandatory=true 
-versionRange="[1.14,1.20)" 
+versionRange="[1.8,1.20)" 
 ordering="NONE" 
 side="BOTH"
