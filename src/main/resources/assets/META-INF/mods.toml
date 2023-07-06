@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="*"
+license="CC BY-NC"
+ [[mods]]
+modId="creeper-backguard"
+version="${version}"
+displayName="Creeper Backguard"
+logoFile="assets/creeper-backguard/icon.png"
+authors="JuaanP"
+description='''
+Creepers only ignites if they are inside your field of view.
+'''
+[[dependencies.creeper-backguard]]
+modId="forge"
+mandatory=false
+versionRange="[0.0.0,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.creeper-backguard]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.0,)"
+ordering="NONE"
+side="BOTH"

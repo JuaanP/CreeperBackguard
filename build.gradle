@@ -1,0 +1,74 @@
+plugins {
+	id 'fabric-loom' version '1.2-SNAPSHOT'	// Fabric
+	id 'maven-publish'
+	id 'eclipse'
+	//id 'net.minecraftforge.gradle' version '8' // Forge
+}
+
+version = project.mod_version
+group = project.maven_group
+
+	// Forge
+//base {
+//	archivesName = project.archives_base_name
+//}
+	// Forge
+
+	// Fabric
+loom {
+    runs {
+		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+		datagen {
+			inherit server
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=block-breaking"
+ 
+			runDir "build/datagen"
+		}
+	}
+}
+	// Fabric
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
+	}
+}
+dependencies {
+	//minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'	// Forge
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"	// Fabric
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"	// Fabric
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"	// Fabric
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 8
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.juaanp.creeperbackguard.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"CreeperIgniteGoalMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
