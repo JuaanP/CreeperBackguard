@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.juaanp.creeperbackguard.mixin",
+  "refmap": "refmap.example.json",
+  "mixins": [],
+  "client": ["MixinMinecraft"],
+  "server": []
+}
