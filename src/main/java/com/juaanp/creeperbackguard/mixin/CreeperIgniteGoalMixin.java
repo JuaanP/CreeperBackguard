@@ -1,5 +1,7 @@
 package com.juaanp.creeperbackguard.mixin;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.LivingEntity;
@@ -31,21 +33,27 @@ public class CreeperIgniteGoalMixin {
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     private void creeperIgnitionGoal(CallbackInfo ci) {
         if (this.target instanceof PlayerEntity) {
-            MinecraftClient minecraftClient = MinecraftClient.getInstance();
 
-            if (minecraftClient != null) {
-                GameOptions gameOptions = minecraftClient.options;
+            LivingEntity player = this.target;
+            LivingEntity creeper = this.creeper;
 
-                if (gameOptions != null) {
-                    fovScale = Math.min(gameOptions.getFov().getValue(), 80);
-
-                    Vec3d targetPos = this.target.getCameraPosVec(1.0f);
-                    Vec3d creeperPos = this.creeper.getCameraPosVec(1.0f);
-                    Vec3d distance = creeperPos.subtract(targetPos);
-                    if (!(this.target.getRotationVec(1.0f).dotProduct(distance.normalize()) >= Math.cos(Math.toRadians(fovScale)))) {
-                        ci.cancel();
+            if (player.world.isClient){
+                MinecraftClient minecraftClient = MinecraftClient.getInstance();
+                if(minecraftClient != null){
+                    GameOptions gameOptions = minecraftClient.options;
+                    if (gameOptions != null) {
+                        fovScale = Math.min(gameOptions.getFov().getValue(), 80);
                     }
                 }
+            } else {
+                fovScale = 70;
+            }
+
+            Vec3d targetPos = player.getCameraPosVec(1.0f);
+            Vec3d creeperPos = creeper.getCameraPosVec(1.0f);
+            Vec3d distance = creeperPos.subtract(targetPos);
+            if (!(player.getRotationVec(1.0f).dotProduct(distance.normalize()) >= Math.cos(Math.toRadians(fovScale)))) {
+                ci.cancel();
             }
         }
     }
