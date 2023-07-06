@@ -1,13 +1,13 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '5.+'
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '1.2'
+version = '1.2.0-1.19'
 group = 'com.juaanp.creeperbackguard'
-archivesBaseName = 'creeperbackguard'
+archivesBaseName = 'Creeper Backguard'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
