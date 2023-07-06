@@ -1,7 +1,5 @@
 package com.juaanp.creeperbackguard.mixin;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.LivingEntity;
