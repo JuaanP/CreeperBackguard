@@ -1,18 +1,18 @@
-modLoader="javafml"
-loaderVersion="[38,)"
-license="Creative Commons Non-Commercial"
- [[mods]]
-modId="creeperbackguard"
-version="${file.jarVersion}"
-displayName="Creeper Backguard"
-logoFile="icon.png"
-authors="JuaanP"
-description='''
-Creepers only ignites within your field of view.
-'''
- [[dependencies.creeperbackguard]]
-modId="minecraft"
-mandatory=true
-versionRange="[1.14,1.20)"
-ordering="NONE"
+modLoader="javafml" 
+loaderVersion="[38,)" 
+license="Creative Commons Non-Commercial" 
+[[mods]] 
+modId="creeperbackguard" 
+version="${file.jarVersion}" 
+displayName="Creeper Backguard" 
+logoFile="icon.png" 
+authors="JuaanP" 
+description=''' 
+Creepers only ignites within your field of view. 
+''' 
+[[dependencies.creeperbackguard]] 
+modId="minecraft" 
+mandatory=true 
+versionRange="[1.14,1.20)" 
+ordering="NONE" 
 side="BOTH"
