@@ -39,7 +39,7 @@ public class CreeperIgniteGoalMixinClient {
             MinecraftClient minecraftClient = MinecraftClient.getInstance();
             GameOptions gameOptions = minecraftClient.options;
             if (gameOptions != null) {
-                fovScale = Math.min(gameOptions.fov, 80);
+                fovScale = Math.min(gameOptions.getFov().getValue(), 80);
             } else {
                 fovScale = 70;
             }
