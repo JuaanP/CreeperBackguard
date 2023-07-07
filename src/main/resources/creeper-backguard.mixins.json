@@ -2,8 +2,12 @@
 	"required": true,
 	"package": "com.juaanp.creeperbackguard.mixin",
 	"compatibilityLevel": "JAVA_8",
-	"mixins": [
-		"CreeperIgniteGoalMixin"
+	"mixins": [],
+	"client": [
+		"CreeperIgniteGoalMixinClient"
+	],
+	"server": [
+		"CreeperIgniteGoalMixinServer"
 	],
 	"injectors": {
 		"defaultRequire": 1

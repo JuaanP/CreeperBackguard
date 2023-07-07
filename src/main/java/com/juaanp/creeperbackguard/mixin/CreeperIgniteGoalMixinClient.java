@@ -8,8 +8,6 @@ import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.Vec3d;
 
-import java.util.logging.ConsoleHandler;
-
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(CreeperIgniteGoal.class)
-public class CreeperIgniteGoalMixin {
+public class CreeperIgniteGoalMixinClient {
 
     @Unique
     private double fovScale;
@@ -37,15 +35,11 @@ public class CreeperIgniteGoalMixin {
 
             LivingEntity player = this.target;
             LivingEntity creeper = this.creeper;
-            if (player.world.isClient){
-                MinecraftClient minecraftClient = MinecraftClient.getInstance();
-                if(minecraftClient != null){
-                    GameOptions gameOptions = minecraftClient.options;
-                    if (gameOptions != null) {
-                        fovScale = Math.min(gameOptions.fov, 80);
-                        System.out.println(gameOptions.fov);
-                    }
-                }
+
+            MinecraftClient minecraftClient = MinecraftClient.getInstance();
+            GameOptions gameOptions = minecraftClient.options;
+            if (gameOptions != null) {
+                fovScale = Math.min(gameOptions.fov, 80);
             } else {
                 fovScale = 70;
             }
