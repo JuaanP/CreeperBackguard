@@ -1,23 +1,14 @@
 plugins {
-	id 'fabric-loom' version '1.2-SNAPSHOT'	// Fabric
+	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
 	id 'eclipse'
-	//id 'net.minecraftforge.gradle' version '8' // Forge
 }
 
 version = project.mod_version
 group = project.maven_group
 
-	// Forge
-//base {
-//	archivesName = project.archives_base_name
-//}
-	// Forge
-
-	// Fabric
 loom {
     runs {
-		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
 		datagen {
 			inherit server
 			name "Data Generation"
@@ -29,7 +20,6 @@ loom {
 		}
 	}
 }
-	// Fabric
 
 sourceSets {
 	main {
@@ -41,10 +31,9 @@ sourceSets {
 	}
 }
 dependencies {
-	//minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'	// Forge
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"	// Fabric
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"	// Fabric
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"	// Fabric
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 }
 
 processResources {
