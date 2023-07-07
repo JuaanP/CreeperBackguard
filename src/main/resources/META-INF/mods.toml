@@ -11,6 +11,6 @@ description="Creepers only ignites within your field of view."
 [[dependencies.creeperbackguard]] 
 modId="minecraft" 
 mandatory=true 
-versionRange="[1.8,1.20)" 
+versionRange="[1.8,1.20.1]" 
 ordering="NONE" 
 side="BOTH"

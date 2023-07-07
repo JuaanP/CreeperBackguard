@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.Mixins;
 
 @Mod("creeperbackguard")
 public class CreeperBackguard {
+
     public CreeperBackguard() {
         MixinBootstrap.init();
         Mixins.addConfiguration("mixins.creeperbackguard.json");
