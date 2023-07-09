@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8.5",
+  "package": "com.example.examplemod.mixins",
+  "refmap": "mixins.examplemod.refmap.json",
+  "mixins": [
+    "ExampleMixin"
+  ]
+}

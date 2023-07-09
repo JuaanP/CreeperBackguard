@@ -1,8 +1,0 @@
-{
-  "compatibilityLevel": "JAVA_8",
-  "package": "com.juaanp.creeperbackguard.mixin",
-  "refmap": "refmap.creeperbackguard.json",
-  "mixins": [
-    "CreeperIgniteGoalMixin"
-  ]
-}
