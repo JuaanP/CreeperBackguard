@@ -1,6 +1,6 @@
 modLoader="javafml"
 
-loaderVersion="[14,)"
+loaderVersion="[40,)"
 
 license="Creative Commons Non-Commercial"
 
@@ -30,7 +30,7 @@ This mod is specifically designed for those who despise losing everything due to
 [[dependencies.creeperbackguard]]
     modId="forge"
     mandatory=true
-    versionRange="[14,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
@@ -38,6 +38,6 @@ This mod is specifically designed for those who despise losing everything due to
 [[dependencies.creeperbackguard]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.8,1.21)"
+    versionRange="[1.18.2,1.21)"
     ordering="NONE"
     side="BOTH"
