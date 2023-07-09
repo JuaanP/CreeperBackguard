@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '1.3.1-1.18.2forge'
+version = '1.3.1_1.18.2_forge'
 group = 'com.juaanp.creeperbackguard'
 archivesBaseName = 'creeperbackguard'
 
@@ -36,7 +36,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'creeperbackguard'
 
             mods {
-                examplemod {
+                creeperbackguard {
                     source sourceSets.main
                 }
             }
@@ -52,7 +52,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'creeperbackguard'
 
             mods {
-                examplemod {
+                creeperbackguard {
                     source sourceSets.main
                 }
             }
@@ -65,7 +65,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', 'creeperbackguard'
 
             mods {
-                examplemod {
+                creeperbackguard {
                     source sourceSets.main
                 }
             }
@@ -81,7 +81,7 @@ minecraft {
             args '--mod', 'creeperbackguard', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                examplemod {
+                creeperbackguard {
                     source sourceSets.main
                 }
             }
