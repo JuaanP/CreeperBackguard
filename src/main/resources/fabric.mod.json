@@ -12,5 +12,15 @@
 	"license": "CC BY-NC",
 	"icon": "assets/creeper-backguard/icon.png",
 	"environment": "*",
+	"entrypoints": {
+		"main": ["com.juaanp.creeperbackguard.CreeperBackguard"]
+	},
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"midnightlib": ">=1.0.0"
+	},
 	"mixins": ["creeper-backguard.mixins.json"]
 }

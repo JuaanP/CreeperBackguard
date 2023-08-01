@@ -1,0 +1,25 @@
+[23:47:45] [ERROR] [FabricLoader/]: Uncaught exception in thread "main"
+java.lang.NoClassDefFoundError: net/fabricmc/mapping/tree/TinyMappingFactory
+	at net.fabricmc.loader.impl.game.LoaderLibrary.<clinit>(LoaderLibrary.java:40)
+	at net.fabricmc.loader.impl.game.LibClassifier.<init>(LibClassifier.java:100)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.locateGame(MinecraftGameProvider.java:171)
+	at net.fabricmc.loader.impl.launch.knot.Knot.createGameProvider(Knot.java:177)
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:130)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68)
+	at net.fabricmc.loader.launch.knot.KnotServer.main(KnotServer.java:28)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+	Suppressed: java.lang.NoClassDefFoundError: net/fabricmc/accesswidener/AccessWidenerVisitor
+		at net.fabricmc.loader.impl.launch.FabricLauncherBase$1.uncaughtException(FabricLauncherBase.java:104)
+		at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1082)
+		at java.base/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1077)
+		at java.base/java.lang.Thread.dispatchUncaughtException(Thread.java:2008)
+	Caused by: java.lang.ClassNotFoundException: net.fabricmc.accesswidener.AccessWidenerVisitor
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+		... 4 more
+Caused by: java.lang.ClassNotFoundException: net.fabricmc.mapping.tree.TinyMappingFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 8 more

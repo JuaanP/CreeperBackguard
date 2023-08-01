@@ -1,0 +1,6 @@
+{
+  "creeperbackguard.midnightconfig.title": "Creeper Backguard Configuration",
+  "creeperbackguard.midnightconfig.igniteOnThirdPerson": "Should third person camera ignite creepers?",
+  "creeperbackguard.midnightconfig.overrideFov": "Should override FOV ignition radius?",
+  "creeperbackguard.midnightconfig.fovValue": "FOV"
+}
